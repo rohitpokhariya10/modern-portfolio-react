@@ -1,5 +1,5 @@
 import { Menu, X } from "lucide-react"
-import { Button } from "../components/Button"
+import { Button } from "../Components/Button"
 import { useEffect, useState } from "react"
 
 

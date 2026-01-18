@@ -1,6 +1,6 @@
 import { ArrowRight, Download, Github, GithubIcon, Linkedin } from "lucide-react";
-import { Button } from "../components/Button";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { Button } from "../Components/Button";
+import { AnimatedBorderButton } from "../Components/AnimatedBorderButton";
 
 export const Hero = () => {
 
