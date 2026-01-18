@@ -1,24 +1,8 @@
-import { ArrowRight, ChevronDown, Download, Github, GithubIcon, Linkedin } from "lucide-react";
+import { ArrowRight, Download, Github, GithubIcon, Linkedin } from "lucide-react";
 import { Button } from "../Components/Button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 export const Hero = () => {
-    const skills = [
-        "HTML",
-        "Css",
-        "Javascript",
-        "C++",
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Node.js",
-
-        "MongoDB",
-        "Vercel",
-        "Tailwind CSS",
-        "Git",
-
-    ];
 
     return (
         //   Radha Radha 
@@ -90,14 +74,25 @@ export const Hero = () => {
                         {/* CTA ---> Call To Action*/}
                         <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                             <Button size="lg">
-                                Contact Me <ArrowRight className="w-5 h-5" />
+                                {/* redirect to contact page */}
+                                <a href="#contact"
+                                    className="flex items-center gap-2">
+
+                                    Contact Me <ArrowRight className="w-5 h-5" />
+                                </a>
                             </Button>
                             {/* Download cv button */}
-                            <AnimatedBorderButton className="  flex items-center justify-center gap-2">
-                                {/*  className="  flex items-center justify-center gap-2"--> ye props ki form me jaa rhi hai component me */}
-                                <Download className="w-5 h-5" />
-                                Download CV
-                            </AnimatedBorderButton>
+                            <a
+                                href="/Rohit_Pokhariya_CV.pdf"
+                                //custom file name of a resume
+                                download="Rohit_Pokhariya_Resume.pdf"
+                            >
+                                <AnimatedBorderButton className="flex items-center gap-2">
+                                    <Download className="w-5 h-5" />
+                                    Download CV
+                                </AnimatedBorderButton>
+                            </a>
+
 
                         </div>
                         {/* social links */}
@@ -106,8 +101,8 @@ export const Hero = () => {
                             <span className="text-sm text-muted-foreground">Follow me: </span>
                             {
                                 [
-                                    { icon: <Github />, href: "" },
-                                    { icon: <Linkedin />, href: "" }
+                                    { icon: <Github />, href: "https://github.com/rohitpokhariya10" },
+                                    { icon: <Linkedin />, href: "https://www.linkedin.com/in/rohit-singh-pokhariya-24742a220/" }
                                 ].map(function (social, index) {
                                     return <a
                                         key={index}
@@ -160,55 +155,8 @@ export const Hero = () => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
-                {/* skills section */}
-                <div className="mt-20 animate-fade-in animation-delay-600">
-                    <p className="text-sm text-muted-foreground mb-6 text-center">
-                        Technologies I work with
-                    </p>
-                    <div className="relative overflow-hidden">
-                        <div
-                            className="absolute left-0 top-0 bottom-0 w-32
-                        bg-gradient-to-r from-background to-transparent z-10"
-                        />
-                        <div className="flex animate-marquee">
-                            {/* 👉 skills list ko 2 baar jod ke (duplicate karke), har skill ko UI me show kar raha hai
-                            Usually ye horizontal scrolling / marquee effect ke liye hota hai. */}
-                            {/* ... spread operator lagate hai tuh vo list ke har item ko alag alag krke dikhata hai tab gap aajata hai */}
-                            {/* ... data ko phelane ka kaam kr rha hai aray me */}
-                            {[...skills, ...skills].map((skill, idx) => (
-                                <div key={idx} className="flex-shrink-0 px-8 py-4">
-                                    <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
-                                        {skill}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-
-
-
             </div>
-            {/* Scroll Down effect */}
-            <div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 
-                animate-fade-in animation-delay-800"
-            >
-                <a
-                    href="#about"
-                    className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
-                >
-                    <span className="text-xs uppercase tracking-wider">Scroll</span>
-                    <ChevronDown className="w-6 h-6 animate-bounce" />
-                </a>
-            </div>
-
-
-
         </section>
 
     );

@@ -8,8 +8,9 @@ export const Navbar = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false)
   const navLinks = [
     { href: "#about", label: "About" },
-    { href: "#experience", label: "Experience" },
-    { href: "#project", label: "Project" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Project" },
+
 
   ]
   // Navbar ---> condition rendering
@@ -59,7 +60,10 @@ export const Navbar = () => {
           </div>
         </div>
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button size="sm" >
+            {/* redirect to contact page */}
+            <a href="#contact">Contact Me </a>
+          </Button>
         </div>
         {/* Moblile menu Button */}
         <button className="md:hidden p-2 text-foreground"
@@ -78,24 +82,27 @@ export const Navbar = () => {
         <div className="container flex flex-col gap-4 mx-auto px-6 py-6">
           {
             navLinks.map(function (link, index) {
-              return <a href={link.href} key={index} 
-              className="text-xl text-muted-foreground  hover:text-foreground py-2 "
-              onClick={()=>{
-              //Navbar me se kisi bhi section me click krne se Navbar close krdo
-                setIsMobileMenu(false)
-              }}
+              return <a href={link.href} key={index}
+                className="text-xl text-muted-foreground  hover:text-foreground py-2 "
+                onClick={() => {
+                  //Navbar me se kisi bhi section me click krne se Navbar close krdo
+                  setIsMobileMenu(false)
+                }}
               >
                 {link.label}
               </a>
 
             })
           }
-          <Button 
-           onClick={()=>{
-              //Navbar me se kisi bhi section me click krne se Navbar close krdo
-                setIsMobileMenu(false)
-              }}
-          >Contact Me</Button>
+          <a
+            href="#contact"
+            onClick={() => setIsMobileMenu(false)}
+            className="w-full"
+          >
+            <Button >Contact Me</Button>
+          </a>
+
+
         </div>
 
       </div>}

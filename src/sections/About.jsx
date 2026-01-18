@@ -32,7 +32,7 @@ export const About = () => {
   return (
     // section tag → ek logical block of content
     // id="about" → navbar ke #about link se yahin scroll hoga
-    <section id="about" className="py-32 relative overflow-hidden">
+    <section id="about" className="py-29 relative overflow-hidden">
       
       {/* 
         container → content ko center me rakhta hai
