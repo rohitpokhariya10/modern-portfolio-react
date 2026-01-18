@@ -1,15 +1,17 @@
 import { ArrowUpRight, Github } from "lucide-react";
 export const Projects = () => {
   const projects = [
+    
     {
-      title: "StudyNotion – E-Learning Platform",
+      title: "eTrade – Dummy E-Commerce Frontend UI",
       description:
-        "A full-stack e-learning platform where students can explore courses and instructors can manage content. Built to understand real-world authentication flow, role-based access, and API integration using MERN stack.",
-      image: "/projects/study-notion.png",
-      tags: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+        "A dummy e-commerce frontend UI built using React and Tailwind CSS. This project focuses on creating reusable components, product layouts, and a clean responsive design similar to real-world shopping platforms.",
+      image: "/projects/eTrade.png",
+      tags: ["React", "Tailwind CSS"],
       link: "#",
       github: "#",
     },
+   
     {
       title: "QuickAI – AI SaaS Web Application",
       description:
@@ -19,21 +21,22 @@ export const Projects = () => {
       link: "#",
       github: "#",
     },
+    
     {
       title: "Modern Developer Portfolio",
       description:
         "A modern and responsive personal portfolio built with React and Tailwind CSS. Designed with a data-first approach where content is defined first and UI components are generated dynamically.",
-      image: "/projects/portfolio.png",
+      image: "/projects/modern-portfolio-2026.png",
       tags: ["React", "Tailwind CSS"],
       link: "#",
       github: "#",
     },
-    {
-      title: "eTrade – Dummy E-Commerce Frontend UI",
+     {
+      title: "StudyNotion – E-Learning Platform",
       description:
-        "A dummy e-commerce frontend UI built using React and Tailwind CSS. This project focuses on creating reusable components, product layouts, and a clean responsive design similar to real-world shopping platforms.",
-      image: "/projects/eTrade.png",
-      tags: ["React", "Tailwind CSS"],
+        "A full-stack e-learning platform where students can explore courses and instructors can manage content. Built to understand real-world authentication flow, role-based access, and API integration using MERN stack.",
+      image: "/projects/study-notion.png",
+      tags: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
       link: "#",
       github: "#",
     }
